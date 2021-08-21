@@ -10,6 +10,7 @@
 
 </head>
 <body>
+    <main>
     <!-- -------------------------Header----------------------- -->
     <section class="container mx-auto px-4 grid grid-cols-2 my-20 gap-16 ">
         <div class="mx-auto">
@@ -20,26 +21,29 @@
             <h1>iMac with Apple M1 Chip.</h1>
             <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16 core Neural Engine 8 GB unifier memory 256GB SSD storage Two THunderbolt/ USB 4 Ports Magic Mouse Magic Keyboard - US English</p>
            <!-- ----------------------- Added Features---------------------- -->
+           <!-- ---------------------------Memory--------------------------- -->
             <div class="my-10">
                 <h3 class="pb-2">Memory</h3>
                 <div class=" grid gap-1 grid-cols-2 justify-start "> 
-                    <button id="ram8GB" class="bg-red-500 hover:bg-red-400 text-white rounded"> 8GB Unified Memory</button>
-                    <button id="ram16GB" class="bg-red-500 hover:bg-red-400 text-white rounded"> 16GB Unified Memory</button>
+                    <button id="ram8GB" class="bg-red-500 hover:bg-red-700 text-white rounded"> 8GB Unified Memory</button>
+                    <button id="ram16GB" class="bg-red-500 hover:bg-red-700 text-white rounded"> 16GB Unified Memory</button>
                 </div>
             </div>
+            <!-- ----------------------------Storage-------------------------- -->
             <div class="my-10">
                 <h3 class="pb-2">Storage</h3>
                 <div  class="grid gap-1 grid-cols-3 justify-start">
-                    <button id="ssd256" class="bg-red-500 hover:bg-red-400 text-white rounded"> 256GB SSD Storage</button>
-                    <button id="ssd512" class="bg-red-500 hover:bg-red-400 text-white rounded"> 512GB SSD Storage</button>
-                    <button id="ssd1024" class="bg-red-500 hover:bg-red-400 text-white rounded"> 1TB SSD Storage</button>
+                    <button id="ssd256" class="bg-red-500 hover:bg-red-700 text-white rounded"> 256GB SSD Storage</button>
+                    <button id="ssd512" class="bg-red-500 hover:bg-red-700 text-white rounded"> 512GB SSD Storage</button>
+                    <button id="ssd1024" class="bg-red-500 hover:bg-red-700 text-white rounded"> 1TB SSD Storage</button>
                 </div>
             </div>
+                <!-- -----------------------Delivery------------------------- -->
             <div class="my-10">
                 <h3 class="pb-2">Choose Your Delivery Option</h3>
                 <div class="grid gap-1 grid-cols-2">
-                    <button id="free-delivery" class="bg-red-500 hover:bg-red-400 text-white rounded"> Friday, Aug 25 Free Prime Delivery</button>
-                    <button id="premium-delivery" class="bg-red-500 hover:bg-red-400 text-white rounded"> Friday, Aug 21 Delivery charge $20</button>
+                    <button id="free-delivery" class="bg-red-500 hover:bg-red-700 text-white rounded"> Friday, Aug 25 Free Prime Delivery</button>
+                    <button id="premium-delivery" class="bg-red-500 hover:bg-red-700 text-white rounded"> Friday, Aug 21 Delivery charge $20</button>
                 </div>
             </div>
             <!-- ------------------Price Calvulation Table----------------- -->
@@ -76,19 +80,24 @@
             <!------------------------------- Promo Code------------------- -->
             <div class="my-10">
                 <h4>Add Promo Code</h4>
-                <div>
-                    <input id="discount-input" class="border border-gray-400 rounded" type="text" name=""">
-                    <button id="discount-button" class="bg-red-500 hover:bg-red-400 text-white px-4" > Apply</button>
+                <div class=" promo-code">
+                    <input id="promo-input" class="py-2 text-center" type="text" placeholder="promo code">
+                    <button onclick="discound()" class=" form-control">Apply</button>
                 </div>
             </div>
-            <hr>
-            <h1>Total: $ <span id="total">1299</span></h1>
-
-
         </div>
-        <!-- <h1 class="mx-auto center">Price: $ <span id="total-price">0</span></h1>
-    </section> -->
+
+       
+
+    </section>
+    <footer class="text-center font-bold">
+        <hr>
+            <h1 class="">Total: $ <span id="total">1299</span></h1>
+    </footer>
     <!-- -------------------------External JS Script---------------- -->
     <script src="js/script.js"></script>
 </body>
 </html>
+
+
+

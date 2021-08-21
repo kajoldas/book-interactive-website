@@ -1,4 +1,4 @@
-//-------------------Memroy Event Handler
+//-------------------Memroy Event Handler----------------------------
 const ram1 = document.getElementById('ram8GB');
 const ram2 = document.getElementById('ram16GB');
 
@@ -7,10 +7,12 @@ const totalMemory = document.getElementById('total-memory');
 ram1.addEventListener('click', function(){
     totalMemory.innerText = 0;
     updateTotal();
+
 });
 ram2.addEventListener('click', function(){
     totalMemory.innerText = 180;
     updateTotal();
+   
 });
 
 
@@ -24,6 +26,11 @@ const ssd2 = document.getElementById('ssd512');
 const ssd3 = document.getElementById('ssd1024');
 
 const totalStorage = document.getElementById('total-storage');
+
+// function ssd(product){
+//     const productInput = document.getElementById(product + '256');
+// }
+
 
 ssd1.addEventListener('click', function(){
     totalStorage.innerText = 0;
@@ -42,7 +49,7 @@ ssd3.addEventListener('click', function(){
 
 
 
-//----------------Shipping Event Handler---------------
+//----------------Delivery Event Handler---------------
 const free = document.getElementById('free-delivery');
 const premium = document.getElementById('premium-delivery');
 
@@ -63,7 +70,7 @@ const basePrice = document.getElementById('base-price');
 const total = document.getElementById('total-price');
 const totalFooter = document.getElementById('total');
 
-
+//-------------Function declaration---------------------
 function updateTotal(){
     const memoryCost = Number(totalMemory.innerText);
     const storageCost = Number(totalStorage.innerText);
@@ -73,32 +80,22 @@ function updateTotal(){
 
     total.innerText = grandTotal;
     totalFooter.innerText = grandTotal;
+    
+};
 
 
 
-    // console.log(basePrice.innerText, totalMemory.innerText, totalStorage.innerText, shippingField.innerText);
-}
-//------------------ Changing Total Price----------------
-// const total = document.getElementById('total-price');
-// total.innerText = 
+//-----------------------Promo Code---------------------------
 
-
-// //-----------------------Promo Code---------------------------
-const promoBtn  = document.getElementById('discount-button');
-promoBtn.addEventListener('click', function(){
-    discount();
-})
-function discount(){
-    const promoCode = document.getElementById('discount-input').innerText;
-    total.innerText= grandTotal * 0.9;
-    totalFooter = grandTotal *0.9;
-    if(promoCode=='stevekaku'){
-        promoBtn= discount();
+//Promo code Start
+function discound() {
+    const promoInput = document.getElementById('promo-input');
+    const totalAmount = document.getElementById('total-price').innerText;
+    const mainAmount = document.getElementById('total')
+    if (promoInput.value == 'stevekaku') {
+        const a = totalAmount / 5;
+        mainAmount.innerText = totalAmount - a;
     }
-    // else{
-    //     break;
-    // }
-}
-
-
+    promoInput.value = ''
+};
 
